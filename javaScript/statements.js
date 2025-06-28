@@ -21,3 +21,4 @@ if (mark > 40) {
 else {
     console.log("Failed");
 }
+// Add new Command
