@@ -18,7 +18,7 @@ const adults = ages.filter((value, idx, ar) => {
     return value > 21;
 })
 
-console.log("Adult ones:",adults)
+console.log("Adult ones:", adults)
 
 console.log(new Date().getFullYear())
 
@@ -26,5 +26,26 @@ const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
 
 const d = new Date();
 let day = days[d.getDay()];
-console.log("Today is",day)
+console.log("Today is", day)
 console.log(10e2)
+
+
+console.log("")
+console.log("Array frequency")
+
+const dupValues = [1, 3, 1, 23, 1, 3, 1, 3, 45, 1, 3, 4, 12, 3,];
+const unValAr=[]
+
+const uniqueValues = dupValues.reduce((acc,val) => {
+    if (acc[val]) {
+        acc[val]+=1
+    }else{
+        acc[val]=1
+        unValAr.push(val)
+    }
+    return acc
+}, {});
+
+console.log("Frequency ",uniqueValues)
+console.log("Unique ",unValAr)
+console.log(...new Set(dupValues))
